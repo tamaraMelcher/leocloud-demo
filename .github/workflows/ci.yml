@@ -1,8 +1,11 @@
 name: CD
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tags'
+        required: true
 
 jobs:
   build_backend:
